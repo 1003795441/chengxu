@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.vacn.chengxu</groupId>
+	<artifactId>mavenProje</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>mavenProje</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.7.0</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.0.0</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+        <dependency>
+			<groupId>com.vacn.chengxu</groupId>
+			<artifactId>test-maven-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.5.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.1</version>
+		</dependency>
+	</dependencies>
+	
+</project>

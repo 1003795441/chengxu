@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xsi:schemaLocation="http://www.springframework.org/schema/beans        
+		http://www.springframework.org/schema/beans/spring-beans.xsd        
+		http://code.alibabatech.com/schema/dubbo        
+		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<dubbo:application name="dubbo_consumer" />
+    <!-- 使用zookeeper -->
+    <!-- 使用multicast广播注册中心暴露发现服务地址 -->
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183" check="true"></dubbo:registry> 
+    <!-- <dubbo:registry address="multicast://224.2.3.4:1234" /> -->
+     <!-- 要引用的服务 -->  
+       <!-- 配置服务的客户端的loadbalance属性为leastactive，此Loadbalance会调用并发数最小的Provider（Consumer端并发数）。 -->
+       <!--   url="dubbo://127.0.0.1:20880/com.xx.DemoService" 点对点连接-->
+   <dubbo:reference interface="com.vacn.chengxu.TestRegistryService" id="testRegistryService" loadbalance="leastactive" ></dubbo:reference>
+	<dubbo:consumer timeout="60000"/>
+</beans>
