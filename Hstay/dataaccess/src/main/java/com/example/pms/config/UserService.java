@@ -36,7 +36,7 @@ public class UserService implements UserDetailsService {
                 User.withDefaultPasswordEncoder()
                         .username("123")
                         .password("123")
-                        .roles("USER").authorities(grantedAuthoritys)
+                        .roles("ADMIN").authorities(grantedAuthoritys)
                         .build();
         return user;
     }
